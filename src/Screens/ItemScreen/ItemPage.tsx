@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
-import { getItem } from "../Redux/List/actions";
-import { AppState } from "../Redux/store";
-import { IStateItemReducer } from "../@types/types";
+import { getItem } from "../../Redux/List/actions";
+import { AppState } from "../../Redux/store";
+import { IStateItemReducer } from "../../@types/types";
+import { Container } from "./Styles";
 
 function ItemPage(): JSX.Element {
   const { id } = useParams<{ id: string }>();
@@ -20,9 +21,9 @@ function ItemPage(): JSX.Element {
   return isLoading ? (
     <div>Loading...</div>
   ) : (
-    <div>
+    <Container error={error}>
       {id} : {error ? error : item.title}
-    </div>
+    </Container>
   );
 }
 

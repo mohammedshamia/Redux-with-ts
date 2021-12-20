@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import ToDoListClassComponent from "../Components/ToDoListClassComponent";
+import ToDoListClassComponent from "../../Components/ToDoListClassComponent";
 import { useNavigate } from "react-router";
-import { AppState } from "../Redux/store";
+import { AppState } from "../../Redux/store";
 // import ToDoList from "../Components/ToDoList";
 
 function Home(): JSX.Element {
